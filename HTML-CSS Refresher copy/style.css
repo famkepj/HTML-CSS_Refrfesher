@@ -1,0 +1,103 @@
+/*Grid & style*/
+
+.parent{
+    display: grid;
+    border-radius: 10px;
+    padding:0 10px;
+    grid-gap: 50px;  
+    height: 260px;
+    width: 1250px;
+    grid-template-rows: 30px 80px 10px;
+    grid-template-columns: repeat(10, 1fr) ;  
+    grid-template-areas: 
+   " h h i . h1 h1 i2 ."
+   " m m m  . m2 m2 m2 ."
+   " f f f . f2 f2 f2 ."
+}
+
+
+header{
+    color: #999999;
+    grid-area:h;
+}
+
+header ~header{
+    grid-area: h1;
+}
+
+figure{
+    height: 50px;
+    grid-area:i;
+}
+
+figure ~figure{
+    grid-area: i2;
+}
+
+main{
+    grid-area:m;
+    padding-top: 5px;
+    border-bottom: 1px solid #f0ecec;
+}
+
+main ~main{
+    grid-area: m2;
+}
+
+footer{
+    grid-area:f;
+    margin-left: 5px;
+}
+
+footer ~footer{
+    grid-area: f2;
+}
+
+/*style*/
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #525252;
+    margin: 50px;
+}
+
+.titel{
+    color:#262626;
+    font-size: 1.2em;
+    display:block;
+    font-weight: bolder;
+}
+
+p{
+    margin: none;
+}
+
+.button{
+    border: solid;
+    border-right: hidden;
+    border-width: 2px;
+    padding: 10px 50px;
+    color: #27cf67;
+    text-align: center;
+    text-decoration: none;
+}
+
+a[href*="Approve"]{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+a[href*="Decline"]{
+    color: red;
+    border-right: solid;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+img{
+    height: 40px;
+}

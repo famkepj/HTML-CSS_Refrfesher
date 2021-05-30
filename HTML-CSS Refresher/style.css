@@ -1,0 +1,94 @@
+/*Grid & style*/
+
+.box {
+    display: grid;
+    grid-gap: 50px;  
+    height: 600px;
+    grid-template-rows: 150px 100px 150px;
+    grid-template-columns: repeat(5, 1fr) ;  
+    grid-template-areas: 
+   "h h h i i"
+   "m m m m m"
+   "f f f f f"
+  }
+
+header{
+    color: #999999;
+    grid-area:h;
+}
+
+figure{
+    height: 50px;
+    grid-area:i;
+}
+
+main{
+    grid-area:m;
+    border-bottom: 1px solid #f0ecec;
+    margin: none;
+}
+
+footer{
+    grid-area:f;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+
+/*style*/
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #525252;
+    margin: 50px;
+}
+
+.titel{
+    color:#262626;
+    font-size: 1.3em;
+    display:block;
+    font-weight: bold;
+}
+
+p{
+    margin: none;
+}
+
+.button{
+    border: solid;
+    border-right: hidden;
+    border-width: 2px;
+    padding: 10px 50px;
+    color: #27cf67;
+    text-align: center;
+    text-decoration: none;
+}
+
+a[href*="Approve"]{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+a[href*="Decline"]{
+    color: red;
+    border-right: solid;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.box{
+    border: solid  #f0ecec;
+    border-radius: 10px;
+    display: inline-block;
+    width: 350px;
+    padding:0 10px;
+    height: 300px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+img{
+    height: 50px;
+}
